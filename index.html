@@ -1,282 +1,187 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TOKEN NAME ($TICKER)</title>
-  <meta name="description" content="TOKEN NAME — the meme coin." />
-  <link rel="icon" href="assets/favicon.png" type="image/png" data-favicon />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            accent: 'rgb(var(--accent-rgb) / <alpha-value>)',
-            accent2: 'rgb(var(--accent2-rgb) / <alpha-value>)',
-            page: 'var(--bg)',
-            surface: 'var(--surface)',
-          },
-          fontFamily: {
-            display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dacity Coin ($Dacity) | The meme coin from the GTA 6 leak</title>
+<meta name="description" content="Dacity Coin ($Dacity) — the community meme coin that showed up in a GTA 6 leak. Live on Ethereum. Not affiliated with Rockstar or Take-Two.">
+<meta property="og:title" content="Dacity Coin ($Dacity)">
+<meta property="og:description" content="There's a meme coin in GTA 6 called Dacity Coin. Community meme on Ethereum.">
+<meta property="og:image" content="https://dacity-coin.netlify.app/banner.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://dacity-coin.netlify.app/banner.png">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-page text-white font-sans antialiased">
+<body>
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="grid-shimmer" aria-hidden="true"></div>
+<canvas id="neon" aria-hidden="true"></canvas>
 
-  <!-- ===================== 1. FIXED NAVBAR ===================== -->
-  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
-    <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
-      <a href="#top" class="flex items-center gap-2.5 min-w-0">
-        <img data-img="logo" src="assets/logo.webp" alt="logo" class="w-9 h-9 rounded-full ring-2 ring-accent/50 shrink-0" />
-        <span data-field="name" class="font-display font-bold text-lg truncate">TOKEN NAME</span>
-        <span data-field="ticker" class="badge shrink-0">$TICKER</span>
-      </a>
-      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#how-to-buy" class="nav-link">How to Buy</a>
-        <a href="#community" class="nav-link">Community</a>
-        <a href="#chart" class="nav-link">Chart</a>
-      </div>
-      <div class="flex items-center gap-2">
-        <a data-link="buy" href="#" class="btn-primary text-sm px-4 py-2 hidden sm:inline-flex">Buy Now</a>
-        <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10" aria-label="Open menu" aria-expanded="false">
-          <svg id="menuIconOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
-          <svg id="menuIconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
-        </button>
-      </div>
-    </nav>
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-page/95 backdrop-blur-xl">
-      <div class="px-4 py-4 flex flex-col gap-1 text-base font-medium">
-        <a href="#about" class="mobile-link">About</a>
-        <a href="#how-to-buy" class="mobile-link">How to Buy</a>
-        <a href="#community" class="mobile-link">Community</a>
-        <a href="#chart" class="mobile-link">Chart</a>
-        <a data-link="buy" href="#" class="btn-primary mt-3 py-3 justify-center">Buy Now</a>
+<nav id="nav">
+  <a href="#top" class="brand"><img src="logo.png" alt="" width="40" height="40">$Dacity</a>
+  <div class="links">
+    <a href="#lore">Lore</a>
+    <a href="#why">Why</a>
+    <a href="#gallery">Art</a>
+    <a href="#token">Token</a>
+    <a href="#buy">Buy</a>
+    <a class="btn sm glow-pulse" href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Buy $Dacity</a>
+  </div>
+</nav>
+
+<header id="top" class="hero">
+  <div class="layer sky" data-speed="0.14" style="background-image:url(img/hero.webp)"></div>
+  <div class="layer haze" data-speed="0.26" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="streaks" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <img class="hero-logo enter" src="logo.png" alt="Dacity Coin" width="160" height="160">
+    <p class="kicker enter d1">GTA 6 LEAK MEME · ETHEREUM</p>
+    <h1 class="enter d2"><span class="neon-pink">DACITY</span> <span class="neon-gold">COIN</span></h1>
+    <p class="tag enter d3">There's a meme coin in GTA 6 called <b>Dacity Coin</b>.<br>This is that coin — <b>$Dacity</b> — for everyone who saw the leak and bought the bit.</p>
+    <div class="cta enter d4">
+      <a class="btn glow-pulse" href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Buy on Uniswap</a>
+      <a class="btn ghost" href="https://dexscreener.com/ethereum/0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Live chart</a>
+      <button class="btn ghost" id="pulseBtn" type="button">Pulse</button>
+    </div>
+    <div class="ca enter d5" id="caBox">
+      <span>CA</span>
+      <code>0x6597b04D1a24A68051Fc19002354457bea38D316</code>
+      <button type="button" data-copy>Copy</button>
+    </div>
+  </div>
+  <div class="scroll-hint enter d6">scroll</div>
+</header>
+
+<div class="marquee"><div class="marquee-track"><span>$Dacity · DACITY COIN · THERE'S A MEME COIN IN GTA 6 · ETHEREUM · BUY ON UNISWAP · HOLD THE COIN · </span><span>$Dacity · DACITY COIN · THERE'S A MEME COIN IN GTA 6 · ETHEREUM · BUY ON UNISWAP · HOLD THE COIN · </span></div></div>
+
+<section id="lore" class="lore">
+  <div class="lore-img reveal"><img src="logo.png" alt="Dacity Coin logo" width="400" height="400"></div>
+  <div class="lore-txt reveal">
+    <p class="eyebrow">ORIGIN</p>
+    <h2>The <span class="neon-pink">Coin</span></h2>
+    <p>In a GTA 6 leak, a meme coin named <b>Dacity Coin</b> appeared on-screen. The clip hit the timeline. The name stuck. The community did the rest.</p>
+    <p><b>$Dacity</b> is that coin on Ethereum — not a studio product, not a city brand, not a partnership. A community ticker born from a leak joke and a shared wink.</p>
+    <p class="disclaimer-inline"><b>Not affiliated with Rockstar Games or Take-Two.</b> Fan meme only.</p>
+    <div class="socials">
+      <a href="https://x.com/robtmb1/status/2109241600002118071" target="_blank" rel="noopener">The leak post</a>
+      <a href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Buy now</a>
+      <a href="https://dexscreener.com/ethereum/0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Chart</a>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="why-head reveal">
+    <p class="eyebrow center">WHY $DACITY</p>
+    <h2 class="center">Built around the <span class="neon-gold">coin</span></h2>
+    <p class="center lead">One leak. One ticker. One community that refused to let the joke die.</p>
+  </div>
+  <div class="why-grid">
+    <article class="why-card reveal"><span class="num">01</span><h3>The leak</h3><p>Dacity Coin showed up inside a GTA 6 clip. That moment is the whole lore — nothing else needed.</p></article>
+    <article class="why-card reveal"><span class="num">02</span><h3>The ticker</h3><p>$Dacity on Ethereum. Same name the internet saw. Same energy, now tradeable.</p></article>
+    <article class="why-card reveal"><span class="num">03</span><h3>The community</h3><p>Holders who treat the coin as the punchline and the product. No fake roadmaps. Just the meme.</p></article>
+    <article class="why-card reveal"><span class="num">04</span><h3>The market</h3><p>Uniswap liquidity. Chart on Dexscreener. Contract on Etherscan. Transparent and live.</p></article>
+  </div>
+</section>
+
+<section class="band" style="background-image:url(img/burst.webp)">
+  <div class="band-inner reveal">
+    <p class="eyebrow">THE SPARK</p>
+    <h2>The coin from the leak.</h2>
+    <p>Copy the CA. Open Uniswap. Own the joke.</p>
+    <a class="btn glow-pulse" href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Buy $Dacity</a>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="sec-head reveal">
+    <p class="eyebrow center">GALLERY</p>
+    <h2 class="center">Coin <span class="neon-pink">art</span></h2>
+    <p class="center sub">Original $Dacity visuals — tap to enlarge.</p>
+  </div>
+  <div class="wall">
+    <figure class="reveal wide"><img src="img/burst.webp" alt="Dacity Coin burst art" loading="lazy"><figcaption>$Dacity Burst</figcaption></figure>
+    <figure class="reveal"><img src="img/stack.webp" alt="Dacity Coin stack" loading="lazy"><figcaption>Stack</figcaption></figure>
+    <figure class="reveal tall"><img src="img/portal.webp" alt="Dacity Coin portal" loading="lazy"><figcaption>Portal</figcaption></figure>
+  </div>
+</section>
+
+<section class="band slim" style="background-image:url(img/portal.webp)">
+  <h2 class="reveal">Hold the coin. Keep the meme.</h2>
+</section>
+
+<section id="token" class="token">
+  <div class="sec-head reveal">
+    <p class="eyebrow center">TOKEN</p>
+    <h2 class="center">On-chain <span class="neon-gold">facts</span></h2>
+  </div>
+  <div class="cards">
+    <div class="card reveal"><h3>Name</h3><p>Dacity Coin</p></div>
+    <div class="card reveal"><h3>Ticker</h3><p>$Dacity</p></div>
+    <div class="card reveal"><h3>Chain</h3><p>Ethereum</p></div>
+    <div class="card reveal"><h3>DEX</h3><p>Uniswap</p></div>
+  </div>
+  <div class="ca big reveal">
+    <span>CA</span>
+    <code>0x6597b04D1a24A68051Fc19002354457bea38D316</code>
+    <button type="button" data-copy>Copy</button>
+  </div>
+  <div class="cta center links-row">
+    <a class="btn ghost" href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Uniswap</a>
+    <a class="btn ghost" href="https://etherscan.io/token/0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Etherscan</a>
+    <a class="btn ghost" href="https://gmgn.ai/eth/token/0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">GMGN</a>
+    <a class="btn ghost" href="https://dexscreener.com/ethereum/0xba532e22bb0fbf0f4a5874892a3037cc90e5af99" target="_blank" rel="noopener">Dexscreener</a>
+  </div>
+</section>
+
+<section id="buy" class="buy" style="--bg:url(img/stack.webp)">
+  <div class="sec-head reveal">
+    <p class="eyebrow center">GET IN</p>
+    <h2 class="center">How to <span class="neon-pink">buy</span></h2>
+  </div>
+  <ol class="steps">
+    <li class="reveal"><b>1</b><h3>Wallet</h3><p>Install MetaMask or any Ethereum wallet.</p></li>
+    <li class="reveal"><b>2</b><h3>Fund</h3><p>Buy ETH and send it to your wallet.</p></li>
+    <li class="reveal"><b>3</b><h3>Swap</h3><p>Open Uniswap, confirm the $Dacity CA, swap.</p></li>
+    <li class="reveal"><b>4</b><h3>Hold</h3><p>You're in. Welcome to $Dacity.</p></li>
+  </ol>
+  <div class="cta center">
+    <a class="btn glow-pulse" href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Buy on Uniswap</a>
+    <a class="btn ghost" href="https://dexscreener.com/ethereum/0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Live chart</a>
+  </div>
+</section>
+
+<section id="community" class="community">
+  <div class="community-card reveal">
+    <img src="logo.png" alt="" width="96" height="96">
+    <div>
+      <p class="eyebrow">COMMUNITY</p>
+      <h2>Same leak. Same coin. Same chat.</h2>
+      <p>Follow the spark post and keep $Dacity loud. The coin is the story.</p>
+      <div class="socials">
+        <a href="https://x.com/robtmb1/status/2109241600002118071" target="_blank" rel="noopener">Leak post on X</a>
+        <a href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Buy $Dacity</a>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main id="top">
-    <!-- ===================== 2. HERO ===================== -->
-    <section id="hero" class="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-20 sm:pt-24 pb-14">
-      <!-- Ambient background: blurred, darkened banner -->
-      <div class="absolute inset-0 -z-10">
-        <img data-img="banner" src="assets/banner.webp" alt="" aria-hidden="true" class="w-full h-full object-cover hero-bg-img" fetchpriority="high" />
-        <div class="absolute inset-0 hero-overlay"></div>
-      </div>
+<footer>
+  <img src="logo.png" alt="" width="84" height="84">
+  <p><b>$Dacity / Dacity Coin</b> is a community memecoin on Ethereum inspired by a GTA 6 leak meme. It is <b>not affiliated with, endorsed by, or connected to</b> Rockstar Games, Take-Two Interactive, or Grand Theft Auto. No intrinsic value. No expectation of financial return. Not financial advice. DYOR.</p>
+  <p class="small">Type <b>dacity</b> anywhere for a pulse.</p>
+</footer>
 
-      <div class="relative w-full max-w-5xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center">
-        <!-- Crisp banner card (dolphin stays centered & unobstructed) -->
-        <div class="banner-card w-full">
-          <img data-img="banner" src="assets/banner.webp" alt="banner" class="w-full h-full object-cover object-center" width="1500" height="500" />
-        </div>
-
-        <!-- Logo: overlaps the banner bottom (layout "overlap") or sits below it (layout "below") — see CONFIG.heroLayout -->
-        <div class="logo-glow hero-logo-wrap mb-5 relative z-10">
-          <img data-img="logo" src="assets/logo.webp" alt="logo" width="160" height="160" class="w-28 h-28 sm:w-40 sm:h-40 rounded-full ring-4 ring-accent/80 border-4 border-[color:var(--bg)] object-cover" />
-        </div>
-
-        <h1 data-field="name" class="font-display font-bold text-5xl sm:text-7xl tracking-tight leading-none text-gradient">TOKEN NAME</h1>
-
-        <div class="mt-4 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-sm font-semibold">
-          <span data-field="ticker" class="text-accent">$TICKER</span>
-          <span class="text-white/40">/</span>
-          <span data-field="chain">Solana</span>
-        </div>
-
-        <p data-field="tagline" class="mt-5 text-lg sm:text-xl text-white/80 max-w-xl leading-snug">Born on-chain. Raised by memes.<br />Powered by the community.</p>
-
-        <!-- Contract address box -->
-        <div class="mt-8 w-full max-w-lg ca-box">
-          <span class="text-xs uppercase tracking-widest text-white/50 shrink-0">CA</span>
-          <code data-field="ca" class="flex-1 min-w-0 truncate text-sm sm:text-base font-mono text-white/90 text-left">TBA</code>
-          <button data-copy-ca class="btn-copy">Copy</button>
-        </div>
-
-        <!-- Main buttons -->
-        <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
-          <a data-link="buy" href="#" class="btn-primary px-7 py-3 text-base">Buy Now</a>
-          <a data-link="twitter" href="#" class="btn-icon" aria-label="X (Twitter)">
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <a data-link="telegram" data-telegram href="#" class="btn-icon" aria-label="Telegram">
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M21.94 4.3 18.7 19.6c-.24 1.08-.88 1.35-1.79.84l-4.94-3.64-2.38 2.3c-.26.26-.49.49-1 .49l.36-5.03 9.15-8.27c.4-.36-.09-.55-.62-.2L6.17 13.2l-4.87-1.52c-1.06-.33-1.08-1.06.22-1.57L20.55 2.8c.88-.33 1.65.2 1.39 1.5z"/></svg>
-          </a>
-        </div>
-
-        <div class="mt-6 inline-flex items-center gap-2 text-xs font-medium text-white/60">
-          <span class="live-dot"></span>
-          <span><span data-field="chain">Solana</span> • Live</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== 3. ABOUT ===================== -->
-    <section id="about" class="section">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-2xl mx-auto">
-          <p class="eyebrow">About</p>
-          <h2 class="section-title">What is <span data-field="name" class="text-accent">TOKEN NAME</span>?</h2>
-          <p data-field="bio" class="mt-5 text-white/70 text-lg leading-relaxed">Placeholder bio. Tell the story of the token here — where it came from, what the mascot is about, and why the community should care. This text will be replaced with the real bio.</p>
-        </div>
-
-        <div class="mt-14 grid gap-5 md:grid-cols-3" id="featureGrid">
-          <!-- filled from CONFIG.features -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== 4. HOW TO BUY ===================== -->
-    <section id="how-to-buy" class="section bg-surface/60">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-2xl mx-auto">
-          <p class="eyebrow">How to Buy</p>
-          <h2 class="section-title">Get <span data-field="ticker" class="text-accent">$TICKER</span> in 4 steps</h2>
-          <p class="mt-4 text-white/70">It takes a couple of minutes. No experience needed.</p>
-        </div>
-
-        <div class="mt-10 highlight-box">
-          <div class="w-10 h-10 rounded-xl bg-accent/15 text-accent grid place-items-center shrink-0">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          </div>
-          <p class="text-white/85">You’re on <strong data-field="chain" class="text-accent">Solana</strong>. Make sure your wallet is set to the <span data-field="chain">Solana</span> network and always double-check the contract address before swapping.</p>
-        </div>
-
-        <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4" id="stepGrid">
-          <!-- filled from JS -->
-        </div>
-
-        <div class="mt-10 flex flex-wrap justify-center gap-3">
-          <a data-link="buy" href="#" class="btn-primary px-7 py-3">Swap on <span data-field="dex">DEX</span></a>
-          <a data-link="chart" href="#" class="btn-ghost px-7 py-3">View Chart</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== 5. COMMUNITY ===================== -->
-    <section id="community" class="section">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-2xl mx-auto">
-          <p class="eyebrow">Community</p>
-          <h2 class="section-title">Join Us</h2>
-          <p class="mt-4 text-white/70">The <span data-field="name">TOKEN NAME</span> community runs this. Dive in and say gm.</p>
-        </div>
-
-        <div class="mt-12 grid gap-6 md:grid-cols-2" id="communityGrid">
-          <div class="community-card">
-            <div class="community-icon">
-              <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </div>
-            <h3 class="font-display font-bold text-2xl mt-5">X (Twitter)</h3>
-            <p class="mt-2 text-white/65">The leak, the sunset, and every update after. Follow @dacity_X for <span data-field="ticker">$TICKER</span> news.</p>
-            <a data-link="twitter" href="#" class="btn-primary mt-6 px-6 py-3 self-start">Follow on X</a>
-          </div>
-          <div class="community-card" data-telegram>
-            <div class="community-icon">
-              <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M21.94 4.3 18.7 19.6c-.24 1.08-.88 1.35-1.79.84l-4.94-3.64-2.38 2.3c-.26.26-.49.49-1 .49l.36-5.03 9.15-8.27c.4-.36-.09-.55-.62-.2L6.17 13.2l-4.87-1.52c-1.06-.33-1.08-1.06.22-1.57L20.55 2.8c.88-.33 1.65.2 1.39 1.5z"/></svg>
-            </div>
-            <h3 class="font-display font-bold text-2xl mt-5">Telegram</h3>
-            <p class="mt-2 text-white/65">Hang out with holders, ask questions and join the raids in real time.</p>
-            <a data-link="telegram" href="#" class="btn-primary mt-6 px-6 py-3 self-start">Join Telegram</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== 6. CHART ===================== -->
-    <section id="chart" class="section bg-surface/60">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-2xl mx-auto">
-          <p class="eyebrow">Chart</p>
-          <h2 class="section-title">Live Chart</h2>
-          <p class="mt-4 text-white/70">Track <span data-field="ticker">$TICKER</span> price, volume and liquidity in real time.</p>
-        </div>
-
-        <div class="mt-10 chart-frame">
-          <iframe id="chartIframe" class="hidden w-full h-full" title="DexScreener chart" loading="lazy" referrerpolicy="no-referrer"></iframe>
-          <div id="chartPlaceholder" class="w-full h-full grid place-items-center text-center p-6">
-            <div>
-              <div class="mx-auto w-14 h-14 rounded-2xl bg-accent/15 text-accent grid place-items-center">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg>
-              </div>
-              <p class="mt-4 font-display font-bold text-xl">Chart coming soon</p>
-              <p id="chartPlaceholderText" class="mt-1 text-white/55 text-sm">The live chart appears here once the contract address is live.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-6 text-center">
-          <a data-link="chart" href="#" class="link-accent inline-flex items-center gap-1.5 font-semibold">Open on DexScreener
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5h5v5M19 5l-9 9M5 9v10h10"/></svg>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ===================== 7. FOOTER ===================== -->
-  <footer class="border-t border-white/10 bg-page">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 grid gap-10 md:grid-cols-3">
-      <div>
-        <div class="flex items-center gap-2.5">
-          <img data-img="logo" src="assets/logo.webp" alt="logo" class="w-10 h-10 rounded-full ring-2 ring-accent/50" />
-          <span data-field="name" class="font-display font-bold text-xl">TOKEN NAME</span>
-          <span data-field="ticker" class="badge">$TICKER</span>
-        </div>
-        <p data-field="footerTagline" class="mt-4 text-white/60 text-sm max-w-xs">Placeholder footer tagline.</p>
-        <div class="mt-5 flex gap-3">
-          <a data-link="twitter" href="#" class="btn-icon !w-10 !h-10" aria-label="X (Twitter)">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <a data-link="telegram" data-telegram href="#" class="btn-icon !w-10 !h-10" aria-label="Telegram">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M21.94 4.3 18.7 19.6c-.24 1.08-.88 1.35-1.79.84l-4.94-3.64-2.38 2.3c-.26.26-.49.49-1 .49l.36-5.03 9.15-8.27c.4-.36-.09-.55-.62-.2L6.17 13.2l-4.87-1.52c-1.06-.33-1.08-1.06.22-1.57L20.55 2.8c.88-.33 1.65.2 1.39 1.5z"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div>
-        <h4 class="font-display font-bold text-sm uppercase tracking-widest text-white/50">Quick Links</h4>
-        <ul class="mt-4 grid grid-cols-2 gap-2 text-sm">
-          <li><a href="#about" class="footer-link">About</a></li>
-          <li><a href="#how-to-buy" class="footer-link">How to Buy</a></li>
-          <li><a href="#community" class="footer-link">Community</a></li>
-          <li><a href="#chart" class="footer-link">Chart</a></li>
-          <li><a data-link="buy" href="#" class="footer-link">Buy Now</a></li>
-          <li><a data-link="chart" href="#" class="footer-link">DexScreener</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="font-display font-bold text-sm uppercase tracking-widest text-white/50">Contract Address</h4>
-        <div class="mt-4 ca-box !p-2 !pl-4">
-          <code data-field="ca" class="flex-1 min-w-0 truncate text-sm font-mono text-white/90">TBA</code>
-          <button data-copy-ca class="btn-copy !px-3 !py-1.5 text-xs">Copy</button>
-        </div>
-        <p class="mt-3 text-xs text-white/45">Network: <span data-field="chain">Solana</span></p>
-      </div>
-    </div>
-
-    <div class="border-t border-white/10">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 text-xs text-white/45 space-y-2 text-center md:text-left">
-        <p><strong class="text-white/60">Disclaimer:</strong> <span data-field="ticker">$TICKER</span> is a meme coin with no intrinsic value or expectation of financial return. It is for entertainment purposes only. Crypto is highly volatile — never invest more than you can afford to lose. Always do your own research. <span data-field="disclaimerNote"></span></p>
-        <p>© <span id="year">2026</span> <span data-field="name">TOKEN NAME</span>. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Toast -->
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-
-  <script src="script.js"></script>
+<div id="lightbox"><button type="button" aria-label="close">x</button><img alt=""><p></p></div>
+<div id="flash"></div>
+<canvas id="fx"></canvas>
+<script src="script.js"></script>
 </body>
 </html>
