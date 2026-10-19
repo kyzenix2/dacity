@@ -2,7 +2,7 @@
   'use strict';
   const root = document.documentElement;
   const preference = matchMedia('(prefers-reduced-motion: reduce)');
-  const targets = [...document.querySelectorAll('.story-title,.story-copy,.gtaify-scene-content,.trailer-frame,.tweet-section,.section-top,.stats,.wallet,.roadmap-sticky,.roadmap-phases li,.outro h2,.outro .button')];
+  const targets = [...document.querySelectorAll('.story-title,.story-copy,.gtaify-scene-content,.trailer-frame,.tweet-section,.section-top,.stats,.roadmap-sticky,.roadmap-phases li,.outro h2,.outro .button')];
   let observer;
   let ticking = false;
   const hero = document.querySelector('.hero');
