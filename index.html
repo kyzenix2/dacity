@@ -1,184 +1,143 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dacity Coin ($Dacity) | The meme coin from the GTA 6 leak</title>
-<meta name="description" content="Dacity Coin ($Dacity) — the community meme coin that showed up in a GTA 6 leak. Live on Ethereum. Not affiliated with Rockstar or Take-Two.">
-<meta property="og:title" content="Dacity Coin ($Dacity)">
-<meta property="og:description" content="There's a meme coin in GTA 6 called Dacity Coin. Community meme on Ethereum.">
-<meta property="og:image" content="https://dacity-coin.netlify.app/banner.png">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://dacity-coin.netlify.app/banner.png">
-<link rel="icon" href="logo.png" type="image/png">
+<meta name="theme-color" content="#110815">
+<title>Dacity Coin — Welcome to the city</title>
+<meta name="description" content="Dacity Coin. Miami nights, crypto culture, and a community token on Ethereum.">
+<link rel="icon" href="assets/dacity.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/dacity-sunset.webp">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="scroll.css">
 </head>
 <body>
-<div class="grid-bg" aria-hidden="true"></div>
-<div class="grid-shimmer" aria-hidden="true"></div>
-<canvas id="neon" aria-hidden="true"></canvas>
-
-<nav id="nav">
-  <a href="#top" class="brand"><img src="logo.png" alt="" width="40" height="40">$Dacity</a>
-  <div class="links">
-    <a href="#lore">Lore</a>
-    <a href="#why">Why</a>
-    <a href="#gallery">Art</a>
-    <a href="#token">Token</a>
-    <a href="#buy">Buy</a>
-    <a class="btn sm glow-pulse" href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Buy $Dacity</a>
-  </div>
-</nav>
-
-<header id="top" class="hero">
-  <div class="layer sky" data-speed="0.14" style="background-image:url(img/hero.webp)"></div>
-  <div class="layer haze" data-speed="0.26" aria-hidden="true"></div>
-  <div class="scanlines" aria-hidden="true"></div>
-  <div class="hero-glow" aria-hidden="true"></div>
-  <div class="streaks" aria-hidden="true"><span></span><span></span><span></span></div>
-  <div class="hero-inner">
-    <img class="hero-logo enter" src="logo.png" alt="Dacity Coin" width="160" height="160">
-    <p class="kicker enter d1">GTA 6 LEAK MEME · ETHEREUM</p>
-    <h1 class="enter d2"><span class="neon-pink">DACITY</span> <span class="neon-gold">COIN</span></h1>
-    <p class="tag enter d3">There's a meme coin in GTA 6 called <b>Dacity Coin</b>.<br>This is that coin — <b>$Dacity</b> — for everyone who saw the leak and bought the bit.</p>
-    <div class="cta enter d4">
-      <a class="btn glow-pulse" href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Buy on Uniswap</a>
-      <a class="btn ghost" href="https://dexscreener.com/ethereum/0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Live chart</a>
-      <button class="btn ghost" id="pulseBtn" type="button">Pulse</button>
-    </div>
-    <div class="ca enter d5" id="caBox">
-      <span>CA</span>
-      <code>0x6597b04D1a24A68051Fc19002354457bea38D316</code>
-      <button type="button" data-copy>Copy</button>
-    </div>
-  </div>
-  <div class="scroll-hint enter d6">scroll</div>
+<header class="hero-header">
+  <a class="nav-cta" href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener noreferrer">Buy <span>↗</span></a>
+  <a class="nav-cta" href="#wallet">Check rewards <span>↗</span></a>
 </header>
-
-<div class="marquee"><div class="marquee-track"><span>$Dacity · DACITY COIN · THERE'S A MEME COIN IN GTA 6 · ETHEREUM · BUY ON UNISWAP · HOLD THE COIN · </span><span>$Dacity · DACITY COIN · THERE'S A MEME COIN IN GTA 6 · ETHEREUM · BUY ON UNISWAP · HOLD THE COIN · </span></div></div>
-
-<section id="lore" class="lore">
-  <div class="lore-img reveal"><img src="logo.png" alt="Dacity Coin logo" width="400" height="400"></div>
-  <div class="lore-txt reveal">
-    <p class="eyebrow">ORIGIN</p>
-    <h2>The <span class="neon-pink">Coin</span></h2>
-    <p>In a GTA 6 leak, a meme coin named <b>Dacity Coin</b> appeared on-screen. The clip hit the timeline. The name stuck. The community did the rest.</p>
-    <p><b>$Dacity</b> is that coin on Ethereum — not a studio product, not a city brand, not a partnership. A community ticker born from a leak joke and a shared wink.</p>
-    <p class="disclaimer-inline"><b>Not affiliated with Rockstar Games or Take-Two.</b> Fan meme only.</p>
-    <div class="socials">
-      <a href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Buy now</a>
-      <a href="https://dexscreener.com/ethereum/0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Chart</a>
+<main>
+<section class="hero">
+  <div class="hero-image"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <div class="eyebrow"><span class="dot"></span> ETHEREUM <span class="divider">/</span> MIAMI STATE OF MIND</div>
+    <h1>WELCOME<br>TO <em>DACITY.</em></h1>
+    <p>Inspired by GTA VI.<br>Now live on Ethereum.</p>
+    <div class="actions">
+      <a class="button primary" href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener noreferrer">Buy on Uniswap <span>↗</span></a>
+      <a class="button ghost" href="#rewards">Explore TTWO rewards <span>↗</span></a>
+    </div>
+    <div class="social-links" role="group" aria-label="Dacity community">
+      <a href="https://x.com/dacity_X" target="_blank" rel="noopener noreferrer" aria-label="Dacity on X (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.64 7.584H.47l8.6-9.835L0 1.154h7.594l5.243 6.932 6.064-6.933Zm-1.29 19.49h2.039L6.487 3.24H4.3l13.31 17.403Z"/></svg><span>X</span></a>
+    </div>
+    <div class="contract">
+      <span>CONTRACT ADDRESS</span>
+      <strong id="contract-address">0x6597b04D1a24A68051Fc19002354457bea38D316</strong>
+      <button type="button" id="copy-contract" aria-label="Copy contract address">Copy CA</button>
+      <span id="contract-status" role="status" aria-live="polite"></span>
     </div>
   </div>
+  <div class="hero-bottom"><span>THE CITY DOESN’T SLEEP. NEITHER DOES THE CULTURE.</span><span>SCROLL TO EXPLORE ↓</span></div>
+</section>
+<div class="city-band" aria-hidden="true"><div class="band-track"><span>DACITY</span><i>/</i><span>FAN MADE</span><i>/</i><span>VICE CITY ENERGY</span><i>/</i><span>DACITY</span><i>/</i><span>FAN MADE</span></div></div>
+<section id="story" class="story section">
+  <div class="story-title">
+    <div class="eyebrow pink">01 / THE CULTURE</div>
+    <h2>MADE BY FANS.<br><em>FOR THE FANS.</em></h2>
+    <span class="story-coordinate">VICE CITY VIBES / ETHEREUM</span>
+  </div>
+  <div class="story-copy">
+    <p class="large">Inspired by the Dacity Coin featured in GTA 6, <strong>Dacity Coin</strong> brings the Vice City vibes to Ethereum.</p>
+    <p>Dacity automatically rewards holders with TTWO tokenized stock rewards. <strong>Take-Two Interactive</strong>, the company behind GTA 6, owns <strong>Rockstar Games</strong>.</p>
+    <p class="story-signoff">Made by fans, for the fans.</p>
+  </div>
+  <div class="story-watermark" aria-hidden="true">DACITY</div>
 </section>
 
-<section id="why" class="why">
-  <div class="why-head reveal">
-    <p class="eyebrow center">WHY $DACITY</p>
-    <h2 class="center">Built around the <span class="neon-gold">coin</span></h2>
-    <p class="center lead">One leak. One ticker. One community that refused to let the joke die.</p>
-  </div>
-  <div class="why-grid">
-    <article class="why-card reveal"><span class="num">01</span><h3>The leak</h3><p>Dacity Coin showed up inside a GTA 6 clip. That moment is the whole lore — nothing else needed.</p></article>
-    <article class="why-card reveal"><span class="num">02</span><h3>The ticker</h3><p>$Dacity on Ethereum. Same name the internet saw. Same energy, now tradeable.</p></article>
-    <article class="why-card reveal"><span class="num">03</span><h3>The community</h3><p>Holders who treat the coin as the punchline and the product. No fake roadmaps. Just the meme.</p></article>
-    <article class="why-card reveal"><span class="num">04</span><h3>The market</h3><p>Uniswap liquidity. Chart on Dexscreener. Contract on Etherscan. Transparent and live.</p></article>
-  </div>
+<section class="trailer section" id="trailer">
+  <div class="trailer-heading"><span class="eyebrow pink">DACITY IN THE FRAME</span><span class="trailer-source">TRAILER / X</span></div>
+  <a class="trailer-frame" href="https://x.com/RockstarGames/status/2110717537964953810?s=20" target="_blank" rel="noopener noreferrer" aria-label="Watch the trailer on X, opens in a new tab">
+    <div class="trailer-still">
+      <img src="assets/dacity-plane.webp" alt="Pink stunt plane with the DacityCoin name circled" width="1280" height="719" loading="lazy">
+      <svg class="trailer-annotation" viewBox="0 0 1280 719" aria-hidden="true"><ellipse cx="343" cy="452" rx="111" ry="49" transform="rotate(12 343 452)"/></svg>
+    </div>
+    <div class="trailer-footer">
+      <span class="trailer-title">Catch the Dacity moment.<small>Watch the trailer on X</small></span>
+      <span class="trailer-watch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7Z"/></svg><span>Watch trailer</span><svg class="external-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
+    </div>
+  </a>
 </section>
-
-<section class="band" style="background-image:url(img/burst.webp)">
-  <div class="band-inner reveal">
-    <p class="eyebrow">THE SPARK</p>
-    <h2>The coin from the leak.</h2>
-    <p>Copy the CA. Open Uniswap. Own the joke.</p>
-    <a class="btn glow-pulse" href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Buy $Dacity</a>
-  </div>
-</section>
-
-<section id="gallery">
-  <div class="sec-head reveal">
-    <p class="eyebrow center">GALLERY</p>
-    <h2 class="center">Coin <span class="neon-pink">art</span></h2>
-    <p class="center sub">Original $Dacity visuals — tap to enlarge.</p>
-  </div>
-  <div class="wall">
-    <figure class="reveal wide"><img src="img/burst.webp" alt="Dacity Coin burst art" loading="lazy"><figcaption>$Dacity Burst</figcaption></figure>
-    <figure class="reveal"><img src="img/stack.webp" alt="Dacity Coin stack" loading="lazy"><figcaption>Stack</figcaption></figure>
-    <figure class="reveal tall"><img src="img/portal.webp" alt="Dacity Coin portal" loading="lazy"><figcaption>Portal</figcaption></figure>
-  </div>
-</section>
-
-<section class="band slim" style="background-image:url(img/portal.webp)">
-  <h2 class="reveal">Hold the coin. Keep the meme.</h2>
-</section>
-
-<section id="token" class="token">
-  <div class="sec-head reveal">
-    <p class="eyebrow center">TOKEN</p>
-    <h2 class="center">On-chain <span class="neon-gold">facts</span></h2>
-  </div>
-  <div class="cards">
-    <div class="card reveal"><h3>Name</h3><p>Dacity Coin</p></div>
-    <div class="card reveal"><h3>Ticker</h3><p>$Dacity</p></div>
-    <div class="card reveal"><h3>Chain</h3><p>Ethereum</p></div>
-    <div class="card reveal"><h3>DEX</h3><p>Uniswap</p></div>
-  </div>
-  <div class="ca big reveal">
-    <span>CA</span>
-    <code>0x6597b04D1a24A68051Fc19002354457bea38D316</code>
-    <button type="button" data-copy>Copy</button>
-  </div>
-  <div class="cta center links-row">
-    <a class="btn ghost" href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Uniswap</a>
-    <a class="btn ghost" href="https://dexscreener.com/ethereum/0xba532e22bb0fbf0f4a5874892a3037cc90e5af99" target="_blank" rel="noopener">Dexscreener</a>
+<section class="section tweet-section" id="on-x" aria-label="Featured post on X" style="padding-top:20px;padding-bottom:45px">
+  <div style="max-width:550px;margin:0 auto">
+    <div class="trailer-heading"><span class="eyebrow pink">FROM THE COMMUNITY</span><a class="trailer-source" href="https://x.com/gtavi_countdown/status/2111652564559077752" target="_blank" rel="noopener noreferrer">OPEN ON X</a></div>
+    <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-align="center"><a href="https://twitter.com/gtavi_countdown/status/2111652564559077752">View the post from @gtavi_countdown on X</a></blockquote>
   </div>
 </section>
 
-<section id="buy" class="buy" style="--bg:url(img/stack.webp)">
-  <div class="sec-head reveal">
-    <p class="eyebrow center">GET IN</p>
-    <h2 class="center">How to <span class="neon-pink">buy</span></h2>
-  </div>
-  <ol class="steps">
-    <li class="reveal"><b>1</b><h3>Wallet</h3><p>Install MetaMask or any Ethereum wallet.</p></li>
-    <li class="reveal"><b>2</b><h3>Fund</h3><p>Buy ETH and send it to your wallet.</p></li>
-    <li class="reveal"><b>3</b><h3>Swap</h3><p>Open Uniswap, confirm the $Dacity CA, swap.</p></li>
-    <li class="reveal"><b>4</b><h3>Hold</h3><p>You're in. Welcome to $Dacity.</p></li>
-  </ol>
-  <div class="cta center">
-    <a class="btn glow-pulse" href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Buy on Uniswap</a>
-    <a class="btn ghost" href="https://dexscreener.com/ethereum/0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Live chart</a>
-  </div>
-</section>
-
-<section id="community" class="community">
-  <div class="community-card reveal">
-    <img src="logo.png" alt="" width="96" height="96">
+<section id="rewards" class="section rewards">
+  <div class="section-top">
     <div>
-      <p class="eyebrow">COMMUNITY</p>
-      <h2>Same leak. Same coin. Same chat.</h2>
-      <p>Follow the spark post and keep $Dacity loud. The coin is the story.</p>
-      <div class="socials">
-        <a href="https://x.com/robtmb1/status/2109241600002118071" target="_blank" rel="noopener">Leak post on X</a>
-        <a href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener">Buy $Dacity</a>
-      </div>
+      <div class="eyebrow pink">03 / THE PAYOUT</div>
+      <h2>City energy.<br><em>TTWO rewards.</em></h2>
     </div>
+    <p>Your piece of the city.<br>Every payout, in one place.</p>
+  </div>
+  <div class="reward-bar"><span class="token">T<span>2</span></span><div><strong>$TTWO</strong><span>Holder reward asset</span></div><span class="status" id="rewards-status" role="status"><i></i> Ethereum</span></div>
+  <div class="stats">
+    <article><span>TOTAL REWARDS DISTRIBUTED</span><strong><span id="rewards-total">—</span> <small>TTWO</small></strong><p id="rewards-usd">Trade on Uniswap</p></article>
+    <article><span>NUMBER OF PAYOUTS</span><strong id="rewards-count">—</strong><p>Holder distributions</p></article>
+    <article><span>NETWORK</span><strong class="network"><a href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener noreferrer">Ethereum <span>↗</span></a></strong><p>Home of Dacity Coin</p></article>
+  </div>
+  <div class="rewards-note"><span id="rewards-updated">Buy and trade $DACITY on Ethereum.</span> <a href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" target="_blank" rel="noopener noreferrer">Buy on Uniswap ↗</a></div>
+  <div class="wallet" id="wallet">
+    <div>
+      <div class="eyebrow">YOUR PIECE OF THE CITY</div>
+      <h3>Check your rewards.</h3>
+      <p>Look up a public wallet address.<br>No wallet connection or signature needed.</p>
+    </div>
+    <form id="wallet-form">
+      <label for="address">Ethereum wallet address</label>
+      <div class="input-row"><input id="address" name="address" placeholder="0x…" autocomplete="off" spellcheck="false" required aria-describedby="wallet-message"><button type="submit" aria-label="Check wallet rewards">Check <span>↗</span></button></div>
+      <p id="wallet-message" role="status" aria-live="polite">Enter your wallet, then buy $DACITY on Uniswap.</p>
+      <div id="wallet-result" hidden aria-live="polite"></div>
+    </form>
   </div>
 </section>
-
+<section class="roadmap-scroll section" id="roadmap">
+  <div class="roadmap-sticky">
+    <div class="eyebrow pink">04 / THE ROAD AHEAD</div>
+    <h2>ONE CITY.<br><em>NO CEILING.</em></h2>
+    <p>Three phases.<br>A world-sized ambition.</p>
+    <div class="roadmap-meter" aria-hidden="true"><span></span></div>
+  </div>
+  <ol class="roadmap-phases">
+    <li><div class="phase-number">01</div><div class="phase-detail"><span>PHASE 1</span><h3>Launch<br><strong>$DACITY</strong></h3></div><span class="phase-arrow" aria-hidden="true">↗</span></li>
+    <li><div class="phase-number">02</div><div class="phase-detail"><span>PHASE 2</span><h3><strong>1000</strong><br>Holders</h3></div><span class="phase-arrow" aria-hidden="true">↗</span></li>
+    <li><div class="phase-number">03</div><div class="phase-detail"><span>PHASE 3</span><h3>Become the largest GTA fan token<br><strong>on the planet</strong></h3></div><span class="phase-arrow" aria-hidden="true">↗</span></li>
+  </ol>
+</section>
+<section class="outro">
+  <div class="eyebrow">SUNSET IS JUST THE BEGINNING</div>
+  <h2>SEE YOU IN<br><em>DACITY.</em></h2>
+  <a href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x6597b04D1a24A68051Fc19002354457bea38D316" class="button primary" target="_blank" rel="noopener noreferrer">Buy on Uniswap <span>↗</span></a>
+</section>
+</main>
 <footer>
-  <img src="logo.png" alt="" width="84" height="84">
-  <p><b>$Dacity / Dacity Coin</b> is a community memecoin on Ethereum inspired by a GTA 6 leak meme. It is <b>not affiliated with, endorsed by, or connected to</b> Rockstar Games, Take-Two Interactive, or Grand Theft Auto. No intrinsic value. No expectation of financial return. Not financial advice. DYOR.</p>
-  <p class="small">Type <b>dacity</b> anywhere for a pulse.</p>
+  <div class="footer-top">
+    <a class="brand" href="#"><img src="assets/dacity.webp" alt=""><span>DACITY COIN</span></a>
+    <div class="social-links" role="group" aria-label="Follow Dacity">
+      <a href="https://x.com/dacity_X" target="_blank" rel="noopener noreferrer" aria-label="Dacity on X (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.64 7.584H.47l8.6-9.835L0 1.154h7.594l5.243 6.932 6.064-6.933Zm-1.29 19.49h2.039L6.487 3.24H4.3l13.31 17.403Z"/></svg><span>X</span></a>
+    </div>
+    <a href="#">Back to the top ↑</a>
+  </div>
+  <p>Dacity Coin is an independent community project. Not affiliated with or endorsed by Rockstar Games, Take-Two Interactive, Grand Theft Auto, or Robinhood. Not an official in-game currency. Rewards are not guaranteed.</p>
+  <div class="footer-bottom"><span>© 2026 DACITY COIN</span><span>MIAMI STATE OF MIND.</span></div>
 </footer>
-
-<div id="lightbox"><button type="button" aria-label="close">x</button><img alt=""><p></p></div>
-<div id="flash"></div>
-<canvas id="fx"></canvas>
-<script src="script.js"></script>
+<script src="app.js"></script>
+<script src="scroll.js"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
