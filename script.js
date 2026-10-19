@@ -15,22 +15,22 @@
 const CONFIG = {
   name: "Dacity Coin",
   ticker: "Dacity",                   // without "$" (added automatically)
-  chain: "solana",                    // ethereum|eth|robinhood|bnb|bsc|solana|sol|hyper|arc
+  chain: "ethereum",                  // ethereum|eth|robinhood|bnb|bsc|solana|sol|hyper|arc
   tagline: "Neon nights. Palm trees. On-chain.\nThe city's favorite meme coin.", // max 2 lines (\n = line break)
-  bio: "Dacity Coin showed up in a GTA 6 leak — a new-game backdrop with Lucia, and a logo that's a stylized D over a sunset. It lives on Solana now: neon nights, palm-lined water, and a city that runs it together.",
+  bio: "Dacity Coin showed up in a GTA 6 leak — a new-game backdrop with Lucia, and a logo that's a stylized D over a sunset. It lives on Ethereum now: neon nights, palm-lined water, and a city that runs it together.",
   footerTagline: "Neon nights. Palm trees. On-chain. Welcome to Dacity.",
   disclaimerNote: "Dacity Coin is an independent community meme token and is not affiliated with Rockstar Games, Take-Two Interactive or Grand Theft Auto.",
   logo: "assets/logo.webp",           // path or URL to logo/mascot (logo.jpg = original)
   banner: "assets/banner.webp",       // path or URL to hero banner (banner.jpg = original)
   favicon: "assets/favicon.png",      // falls back to logo if empty
   heroLayout: "below",                // "overlap" = logo overlaps banner bottom; "below" = logo sits under banner (use when banner already shows the logo)
-  ca: "TBA",                         // "TBA" or "" keeps buy/chart links as placeholders
+  ca: "0x6597b04D1a24A68051Fc19002354457bea38D316",
   twitter: "https://x.com/dacity_X",  // X/Twitter URL (null = placeholder, "" = remove)
   telegram: "",                       // no Telegram — every Telegram element is removed
 
   // 3 About feature cards — echo the bio
   features: [
-    { icon: "🌴", title: "Straight Outta the Leak", text: "Spotted in a GTA 6 leak with Lucia in the background — now living on Solana." },
+    { icon: "🌴", title: "Straight Outta the Leak", text: "Spotted in a GTA 6 leak with Lucia in the background — now living on Ethereum." },
     { icon: "🌆", title: "The Sunset Mark", text: "A stylized D over a neon sunset, ringed in pink above the Miami skyline." },
     { icon: "🤝", title: "Run by the Streets", text: "No suits, no gatekeepers. A city full of holders running it together." },
   ],
